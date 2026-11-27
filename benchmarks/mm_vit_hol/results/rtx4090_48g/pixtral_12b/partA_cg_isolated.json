@@ -1,0 +1,59 @@
+{
+  "model_key": "pixtral_12b",
+  "display_name": "Pixtral-12B-2409",
+  "family": "pixtral",
+  "model_path": "/share/shared_weights/Pixtral-12B-2409",
+  "cudagraph_mm_encoder": true,
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "1",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "isolated_cases": {
+    "img_1024x1024": {
+      "modality": "image",
+      "prompt_tokens_total": 4167,
+      "vit_p50_ms": 45.617,
+      "vit_p95_ms": 48.043,
+      "step_total_p50_ms": 720.779,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    },
+    "img_1920x1080": {
+      "modality": "image",
+      "prompt_tokens_total": 2347,
+      "vit_p50_ms": 34.399,
+      "vit_p95_ms": 42.887,
+      "step_total_p50_ms": 410.5,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    },
+    "img_2048x1400_2k": {
+      "modality": "image",
+      "prompt_tokens_total": 2867,
+      "vit_p50_ms": 31.018,
+      "vit_p95_ms": 37.671,
+      "step_total_p50_ms": 489.738,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    },
+    "img_3840x2160_4k": {
+      "modality": "image",
+      "prompt_tokens_total": 2347,
+      "vit_p50_ms": 33.293,
+      "vit_p95_ms": 39.742,
+      "step_total_p50_ms": 409.876,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    }
+  },
+  "part_a_unit_chunking": {},
+  "peak_reserved_mib": 24890.0
+}

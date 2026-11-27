@@ -1,0 +1,313 @@
+{
+  "model_key": "internvl3_5_8b",
+  "display_name": "InternVL3.5-8B-HF",
+  "model_path": "/share/xbh/model/InternVL3_5-8B-HF",
+  "cudagraph_mm_encoder": false,
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "4",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "isolated": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "family": "internvl_hf",
+      "model_path": "/share/xbh/model/InternVL3_5-8B-HF",
+      "cudagraph_mm_encoder": false,
+      "env": {
+        "hostname": "test-X640-G40",
+        "torch_version": "2.14.0+cu132",
+        "cuda_version": "13.2",
+        "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+        "cuda_visible_devices": "4",
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_sm": "sm_89",
+        "gpu_vram_mib": 48508.1,
+        "gpu_sm_count": 128,
+        "git_commit": "b9fc915ee6"
+      },
+      "isolated_cases": {
+        "img_1024x1024": {
+          "modality": "image",
+          "prompt_tokens_total": 2574,
+          "vit_p50_ms": 61.04,
+          "vit_p95_ms": 61.148,
+          "step_total_p50_ms": 327.193
+        },
+        "img_1920x1080": {
+          "modality": "image",
+          "prompt_tokens_total": 2318,
+          "vit_p50_ms": 54.867,
+          "vit_p95_ms": 55.904,
+          "step_total_p50_ms": 299.0
+        },
+        "img_2048x1400_2k": {
+          "modality": "image",
+          "prompt_tokens_total": 1806,
+          "vit_p50_ms": 42.764,
+          "vit_p95_ms": 43.037,
+          "step_total_p50_ms": 227.972
+        },
+        "img_3840x2160_4k": {
+          "modality": "image",
+          "prompt_tokens_total": 2318,
+          "vit_p50_ms": 54.833,
+          "vit_p95_ms": 54.86,
+          "step_total_p50_ms": 299.483
+        },
+        "vid_16f_560": {
+          "modality": "video",
+          "prompt_tokens_total": 4226,
+          "vit_p50_ms": 98.493,
+          "vit_p95_ms": 98.527,
+          "step_total_p50_ms": 545.047
+        },
+        "vid_32f_560": {
+          "modality": "video",
+          "prompt_tokens_total": 8450,
+          "vit_p50_ms": 200.164,
+          "vit_p95_ms": 201.114,
+          "step_total_p50_ms": 1181.391
+        },
+        "vid_32f_784": {
+          "modality": "video",
+          "prompt_tokens_total": 8450,
+          "vit_p50_ms": 200.485,
+          "vit_p95_ms": 203.162,
+          "step_total_p50_ms": 1185.855
+        }
+      },
+      "part_a_unit_chunking": {
+        "img_4k_tiles": {
+          "unit_label": "tiles(n=9,shape=[3, 448, 448])",
+          "num_units": 9,
+          "output_tokens": 2304,
+          "monolithic_p50_ms": 54.115,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 9,
+              "chunk_p50_ms": 11.424,
+              "chunk_max_ms": 16.079,
+              "sum_chunks_ms": 107.728,
+              "peak_reduction_pct": 70.29,
+              "compute_overhead_pct": 99.07,
+              "max_abs_diff": 0.78125,
+              "cosine_sim": 0.99967206
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 5,
+              "chunk_p50_ms": 13.97,
+              "chunk_max_ms": 14.59,
+              "sum_chunks_ms": 71.015,
+              "peak_reduction_pct": 73.04,
+              "compute_overhead_pct": 31.23,
+              "max_abs_diff": 0.42919921875,
+              "cosine_sim": 0.99974084
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 3,
+              "chunk_p50_ms": 25.575,
+              "chunk_max_ms": 25.667,
+              "sum_chunks_ms": 66.424,
+              "peak_reduction_pct": 52.57,
+              "compute_overhead_pct": 22.74,
+              "max_abs_diff": 0.496337890625,
+              "cosine_sim": 0.99969578
+            }
+          }
+        },
+        "vid_16f_560": {
+          "unit_label": "tiles(n=16,shape=[3, 448, 448])",
+          "num_units": 16,
+          "output_tokens": 4096,
+          "monolithic_p50_ms": 96.53,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 16,
+              "chunk_p50_ms": 11.46,
+              "chunk_max_ms": 16.261,
+              "sum_chunks_ms": 209.747,
+              "peak_reduction_pct": 83.15,
+              "compute_overhead_pct": 117.29,
+              "max_abs_diff": 0.5859375,
+              "cosine_sim": 0.99975908
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 8,
+              "chunk_p50_ms": 13.977,
+              "chunk_max_ms": 18.233,
+              "sum_chunks_ms": 115.962,
+              "peak_reduction_pct": 81.11,
+              "compute_overhead_pct": 20.13,
+              "max_abs_diff": 0.41796875,
+              "cosine_sim": 0.99979192
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 4,
+              "chunk_p50_ms": 25.559,
+              "chunk_max_ms": 25.611,
+              "sum_chunks_ms": 102.271,
+              "peak_reduction_pct": 73.47,
+              "compute_overhead_pct": 5.95,
+              "max_abs_diff": 0.5078125,
+              "cosine_sim": 0.99976629
+            }
+          }
+        },
+        "vid_32f_560": {
+          "unit_label": "tiles(n=32,shape=[3, 448, 448])",
+          "num_units": 32,
+          "output_tokens": 8192,
+          "monolithic_p50_ms": 196.004,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 32,
+              "chunk_p50_ms": 11.684,
+              "chunk_max_ms": 17.867,
+              "sum_chunks_ms": 434.946,
+              "peak_reduction_pct": 90.88,
+              "compute_overhead_pct": 121.91,
+              "max_abs_diff": 0.9765625,
+              "cosine_sim": 0.99975884
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 16,
+              "chunk_p50_ms": 14.015,
+              "chunk_max_ms": 17.02,
+              "sum_chunks_ms": 232.29,
+              "peak_reduction_pct": 91.32,
+              "compute_overhead_pct": 18.51,
+              "max_abs_diff": 0.46875,
+              "cosine_sim": 0.9997952
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 8,
+              "chunk_p50_ms": 25.725,
+              "chunk_max_ms": 26.607,
+              "sum_chunks_ms": 206.679,
+              "peak_reduction_pct": 86.43,
+              "compute_overhead_pct": 5.45,
+              "max_abs_diff": 0.90625,
+              "cosine_sim": 0.99976379
+            }
+          }
+        },
+        "vid_32f_784": {
+          "unit_label": "tiles(n=32,shape=[3, 448, 448])",
+          "num_units": 32,
+          "output_tokens": 8192,
+          "monolithic_p50_ms": 196.226,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 32,
+              "chunk_p50_ms": 11.503,
+              "chunk_max_ms": 17.062,
+              "sum_chunks_ms": 398.524,
+              "peak_reduction_pct": 91.3,
+              "compute_overhead_pct": 103.09,
+              "max_abs_diff": 0.958984375,
+              "cosine_sim": 0.99975097
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 16,
+              "chunk_p50_ms": 14.052,
+              "chunk_max_ms": 19.826,
+              "sum_chunks_ms": 235.085,
+              "peak_reduction_pct": 89.9,
+              "compute_overhead_pct": 19.8,
+              "max_abs_diff": 0.591796875,
+              "cosine_sim": 0.99979609
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 8,
+              "chunk_p50_ms": 25.996,
+              "chunk_max_ms": 26.478,
+              "sum_chunks_ms": 208.445,
+              "peak_reduction_pct": 86.51,
+              "compute_overhead_pct": 6.23,
+              "max_abs_diff": 1.154296875,
+              "cosine_sim": 0.99976194
+            }
+          }
+        }
+      },
+      "peak_reserved_mib": 17788.0
+    },
+    "decode_only": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "max_num_batched_tokens": 2048,
+      "heavy_spec": "none",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 18.71,
+      "decode_gpu_itl_p95_ms": 19.615,
+      "decode_gpu_itl_p99_ms": 20.573,
+      "decode_gpu_itl_max_ms": 21.234,
+      "vit_spike_p50_ms": 0.0,
+      "vit_share_of_spike_step_p50": 0.0,
+      "peak_reserved_mib": 16870.0
+    },
+    "coloc_256_4k_img": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "max_num_batched_tokens": 256,
+      "heavy_spec": "img_4k",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 25.794,
+      "decode_gpu_itl_p95_ms": 84.932,
+      "decode_gpu_itl_p99_ms": 87.671,
+      "decode_gpu_itl_max_ms": 92.413,
+      "vit_spike_p50_ms": 54.826,
+      "vit_share_of_spike_step_p50": 0.6412,
+      "peak_reserved_mib": 16674.0
+    },
+    "coloc_256_vid32_784": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "max_num_batched_tokens": 256,
+      "heavy_spec": "vid_32f_784",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 36.128,
+      "decode_gpu_itl_p95_ms": 41.718,
+      "decode_gpu_itl_p99_ms": 240.326,
+      "decode_gpu_itl_max_ms": 257.179,
+      "vit_spike_p50_ms": 199.938,
+      "vit_share_of_spike_step_p50": 0.8341,
+      "peak_reserved_mib": 17520.0
+    },
+    "coloc_2048_vid32_784": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "max_num_batched_tokens": 2048,
+      "heavy_spec": "vid_32f_784",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 19.319,
+      "decode_gpu_itl_p95_ms": 402.941,
+      "decode_gpu_itl_p99_ms": 406.395,
+      "decode_gpu_itl_max_ms": 442.716,
+      "vit_spike_p50_ms": 199.608,
+      "vit_share_of_spike_step_p50": 0.4949,
+      "peak_reserved_mib": 17558.0
+    }
+  }
+}

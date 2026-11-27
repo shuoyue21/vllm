@@ -1,0 +1,227 @@
+{
+  "model_key": "gemma3_12b",
+  "display_name": "Gemma-3-12B-IT",
+  "family": "gemma3",
+  "model_path": "/share/shared_weights/gemma-3-12b-it",
+  "payload_modality": "image",
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "4",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "decode_only": {
+      "model_key": "gemma3_12b",
+      "display_name": "Gemma-3-12B-IT",
+      "payload_modality": "image",
+      "mode": "decode_only",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 25558.0,
+      "decode_itl_all_ms": {
+        "count": 2128,
+        "p50": 31.207,
+        "p95": 33.341,
+        "p99": 35.168,
+        "max": 35.723,
+        "mean": 31.349
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_compute_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_wall_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "atomic_serial": {
+      "model_key": "gemma3_12b",
+      "display_name": "Gemma-3-12B-IT",
+      "payload_modality": "image",
+      "mode": "atomic_serial",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 25558.0,
+      "decode_itl_all_ms": {
+        "count": 2128,
+        "p50": 31.162,
+        "p95": 33.005,
+        "p99": 156.457,
+        "max": 156.806,
+        "mean": 34.009
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 48,
+        "p50": 156.086,
+        "p95": 156.806,
+        "p99": 156.806,
+        "max": 156.806,
+        "mean": 156.249
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 124.798,
+        "p95": 124.878,
+        "p99": 124.878,
+        "max": 124.878,
+        "mean": 124.793
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 124.904,
+        "p95": 124.998,
+        "p99": 124.998,
+        "max": 124.998,
+        "mean": 124.901
+      }
+    },
+    "dual_stream_same_proc": {
+      "model_key": "gemma3_12b",
+      "display_name": "Gemma-3-12B-IT",
+      "payload_modality": "image",
+      "mode": "dual_stream_same_proc",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 26066.0,
+      "decode_itl_all_ms": {
+        "count": 2128,
+        "p50": 31.324,
+        "p95": 33.811,
+        "p99": 149.235,
+        "max": 151.063,
+        "mean": 34.087
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 48,
+        "p50": 149.218,
+        "p95": 151.063,
+        "p99": 151.063,
+        "max": 151.063,
+        "mean": 149.505
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 137.383,
+        "p95": 140.918,
+        "p99": 140.918,
+        "max": 140.918,
+        "mean": 138.051
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 137.495,
+        "p95": 141.064,
+        "p99": 141.064,
+        "max": 141.064,
+        "mean": 138.181
+      }
+    },
+    "unit_yield_c2": {
+      "model_key": "gemma3_12b",
+      "display_name": "Gemma-3-12B-IT",
+      "payload_modality": "image",
+      "mode": "unit_yield_c2",
+      "parity_max_diff": 1.84375,
+      "peak_reserved_mib": 25558.0,
+      "stash_mib": 0.0,
+      "unit_label": "pan_scan_crops(n=3,shape=[3, 896, 896])",
+      "num_units": 3,
+      "decode_itl_all_ms": {
+        "count": 2128,
+        "p50": 31.207,
+        "p95": 35.467,
+        "p99": 116.988,
+        "max": 119.376,
+        "mean": 34.176
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 96,
+        "p50": 76.643,
+        "p95": 119.376,
+        "p99": 119.376,
+        "max": 119.376,
+        "mean": 96.65
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 129.598,
+        "p95": 130.094,
+        "p99": 130.094,
+        "max": 130.094,
+        "mean": 129.641
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 161.173,
+        "p95": 164.363,
+        "p99": 164.363,
+        "max": 164.363,
+        "mean": 162.077
+      }
+    },
+    "unit_yield_c1": {
+      "model_key": "gemma3_12b",
+      "display_name": "Gemma-3-12B-IT",
+      "payload_modality": "image",
+      "mode": "unit_yield_c1",
+      "parity_max_diff": 4.71875,
+      "peak_reserved_mib": 25558.0,
+      "stash_mib": 0.0,
+      "unit_label": "pan_scan_crops(n=3,shape=[3, 896, 896])",
+      "num_units": 3,
+      "decode_itl_all_ms": {
+        "count": 2128,
+        "p50": 31.253,
+        "p95": 76.005,
+        "p99": 78.913,
+        "max": 79.549,
+        "mean": 34.459
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 144,
+        "p50": 76.423,
+        "p95": 79.549,
+        "p99": 79.549,
+        "max": 79.549,
+        "mean": 76.799
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 133.662,
+        "p95": 134.378,
+        "p99": 134.378,
+        "max": 134.378,
+        "mean": 133.901
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 197.567,
+        "p95": 200.68,
+        "p99": 200.68,
+        "max": 200.68,
+        "mean": 198.359
+      }
+    }
+  }
+}

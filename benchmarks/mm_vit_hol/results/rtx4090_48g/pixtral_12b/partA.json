@@ -1,0 +1,99 @@
+{
+  "model_key": "pixtral_12b",
+  "display_name": "Pixtral-12B-2409",
+  "model_path": "/share/shared_weights/Pixtral-12B-2409",
+  "cudagraph_mm_encoder": false,
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "1",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "isolated": {
+      "model_key": "pixtral_12b",
+      "display_name": "Pixtral-12B-2409",
+      "family": "pixtral",
+      "model_path": "/share/shared_weights/Pixtral-12B-2409",
+      "cudagraph_mm_encoder": false,
+      "env": {
+        "hostname": "test-X640-G40",
+        "torch_version": "2.14.0+cu132",
+        "cuda_version": "13.2",
+        "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+        "cuda_visible_devices": "1",
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_sm": "sm_89",
+        "gpu_vram_mib": 48508.1,
+        "gpu_sm_count": 128,
+        "git_commit": "b9fc915ee6"
+      },
+      "isolated_cases": {
+        "img_1024x1024": {
+          "modality": "image",
+          "prompt_tokens_total": 4167,
+          "vit_p50_ms": 44.899,
+          "vit_p95_ms": 46.424,
+          "step_total_p50_ms": 718.485
+        },
+        "img_1920x1080": {
+          "modality": "image",
+          "prompt_tokens_total": 2347,
+          "vit_p50_ms": 28.125,
+          "vit_p95_ms": 31.982,
+          "step_total_p50_ms": 402.038
+        },
+        "img_2048x1400_2k": {
+          "modality": "image",
+          "prompt_tokens_total": 2867,
+          "vit_p50_ms": 30.848,
+          "vit_p95_ms": 37.176,
+          "step_total_p50_ms": 487.272
+        },
+        "img_3840x2160_4k": {
+          "modality": "image",
+          "prompt_tokens_total": 2347,
+          "vit_p50_ms": 32.03,
+          "vit_p95_ms": 33.087,
+          "step_total_p50_ms": 406.443
+        }
+      },
+      "part_a_unit_chunking": {},
+      "peak_reserved_mib": 24862.0
+    },
+    "decode_only": {
+      "model_key": "pixtral_12b",
+      "display_name": "Pixtral-12B-2409",
+      "max_num_batched_tokens": 2048,
+      "heavy_spec": "none",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 26.504,
+      "decode_gpu_itl_p95_ms": 27.353,
+      "decode_gpu_itl_p99_ms": 27.852,
+      "decode_gpu_itl_max_ms": 28.034,
+      "vit_spike_p50_ms": 0.0,
+      "vit_share_of_spike_step_p50": 0.0,
+      "peak_reserved_mib": 24882.0
+    },
+    "coloc_256_4k_img": {
+      "model_key": "pixtral_12b",
+      "display_name": "Pixtral-12B-2409",
+      "max_num_batched_tokens": 256,
+      "heavy_spec": "img_4k",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 36.361,
+      "decode_gpu_itl_p95_ms": 73.463,
+      "decode_gpu_itl_p99_ms": 76.98,
+      "decode_gpu_itl_max_ms": 81.612,
+      "vit_spike_p50_ms": 30.439,
+      "vit_share_of_spike_step_p50": 0.3986,
+      "peak_reserved_mib": 24468.0
+    }
+  }
+}

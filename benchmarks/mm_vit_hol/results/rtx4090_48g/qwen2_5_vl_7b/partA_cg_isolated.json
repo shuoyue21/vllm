@@ -1,0 +1,96 @@
+{
+  "model_key": "qwen2_5_vl_7b",
+  "display_name": "Qwen2.5-VL-7B",
+  "family": "qwen2_5_vl",
+  "model_path": "/share/shared_weights/Qwen2.5-VL-7B",
+  "cudagraph_mm_encoder": true,
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "4",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "isolated_cases": {
+    "img_1024x1024": {
+      "modality": "image",
+      "prompt_tokens_total": 1382,
+      "vit_p50_ms": 82.781,
+      "vit_p95_ms": 83.037,
+      "step_total_p50_ms": 211.254,
+      "encoder_cg_hits": 6,
+      "encoder_cg_misses": 0
+    },
+    "img_1920x1080": {
+      "modality": "image",
+      "prompt_tokens_total": 2704,
+      "vit_p50_ms": 169.609,
+      "vit_p95_ms": 170.633,
+      "step_total_p50_ms": 427.348,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    },
+    "img_2048x1400_2k": {
+      "modality": "image",
+      "prompt_tokens_total": 3663,
+      "vit_p50_ms": 243.75,
+      "vit_p95_ms": 244.124,
+      "step_total_p50_ms": 592.87,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    },
+    "img_3840x2160_4k": {
+      "modality": "image",
+      "prompt_tokens_total": 4093,
+      "vit_p50_ms": 273.81,
+      "vit_p95_ms": 274.097,
+      "step_total_p50_ms": 657.429,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    },
+    "vid_16f_560": {
+      "modality": "video",
+      "prompt_tokens_total": 3213,
+      "vit_p50_ms": 183.361,
+      "vit_p95_ms": 183.748,
+      "step_total_p50_ms": 488.752,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    },
+    "vid_32f_560": {
+      "modality": "video",
+      "prompt_tokens_total": 6413,
+      "vit_p50_ms": 382.097,
+      "vit_p95_ms": 383.081,
+      "step_total_p50_ms": 1028.002,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    },
+    "vid_32f_784": {
+      "modality": "video",
+      "prompt_tokens_total": 12557,
+      "vit_p50_ms": 759.091,
+      "vit_p95_ms": 762.029,
+      "step_total_p50_ms": 2155.036,
+      "encoder_cg_hits": 0,
+      "encoder_cg_misses": 6
+    }
+  },
+  "part_a_unit_chunking": {
+    "vid_16f_560": {
+      "error": "RuntimeError: Failed to capture mm_kwargs_batch for qwen2_5_vl_7b (video)"
+    },
+    "vid_32f_560": {
+      "error": "RuntimeError: Failed to capture mm_kwargs_batch for qwen2_5_vl_7b (video)"
+    },
+    "vid_32f_784": {
+      "error": "RuntimeError: Failed to capture mm_kwargs_batch for qwen2_5_vl_7b (video)"
+    }
+  },
+  "peak_reserved_mib": 19512.0
+}

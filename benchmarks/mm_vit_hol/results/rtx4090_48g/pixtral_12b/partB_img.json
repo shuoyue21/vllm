@@ -1,0 +1,229 @@
+{
+  "model_key": "pixtral_12b",
+  "display_name": "Pixtral-12B-2409",
+  "family": "pixtral",
+  "model_path": "/share/shared_weights/Pixtral-12B-2409",
+  "payload_modality": "image",
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "1",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "decode_only": {
+      "model_key": "pixtral_12b",
+      "display_name": "Pixtral-12B-2409",
+      "payload_modality": "image",
+      "mode": "decode_only",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 24364.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 26.974,
+        "p95": 27.957,
+        "p99": 28.409,
+        "max": 31.548,
+        "mean": 27.058
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_compute_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_wall_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "atomic_serial": {
+      "model_key": "pixtral_12b",
+      "display_name": "Pixtral-12B-2409",
+      "payload_modality": "image",
+      "mode": "atomic_serial",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 24552.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 27.055,
+        "p95": 28.165,
+        "p99": 54.04,
+        "max": 63.848,
+        "mean": 27.766
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 48,
+        "p50": 53.367,
+        "p95": 63.848,
+        "p99": 63.848,
+        "max": 63.848,
+        "mean": 55.428
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 26.264,
+        "p95": 35.964,
+        "p99": 35.964,
+        "max": 35.964,
+        "mean": 28.137
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 26.345,
+        "p95": 36.064,
+        "p99": 36.064,
+        "max": 36.064,
+        "mean": 28.203
+      }
+    },
+    "dual_stream_same_proc": {
+      "model_key": "pixtral_12b",
+      "display_name": "Pixtral-12B-2409",
+      "payload_modality": "image",
+      "mode": "dual_stream_same_proc",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 24654.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 27.127,
+        "p95": 28.456,
+        "p99": 47.25,
+        "max": 47.681,
+        "mean": 27.712
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 48,
+        "p50": 47.245,
+        "p95": 47.681,
+        "p99": 47.681,
+        "max": 47.681,
+        "mean": 47.222
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 42.496,
+        "p95": 44.203,
+        "p99": 44.203,
+        "max": 44.203,
+        "mean": 42.871
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 42.59,
+        "p95": 44.315,
+        "p99": 44.315,
+        "max": 44.315,
+        "mean": 43.013
+      }
+    },
+    "layer_yield_k4": {
+      "model_key": "pixtral_12b",
+      "display_name": "Pixtral-12B-2409",
+      "payload_modality": "image",
+      "mode": "layer_yield_k4",
+      "parity_max_diff": 0.0,
+      "peak_reserved_mib": 24576.0,
+      "stash_mib": 4.5,
+      "hidden_stash_mib": 4.5,
+      "extra_stash_mib": 0.0,
+      "num_blocks": 24,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 27.129,
+        "p95": 32.712,
+        "p99": 36.529,
+        "max": 38.034,
+        "mean": 27.924
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 288,
+        "p50": 32.53,
+        "p95": 37.458,
+        "p99": 38.034,
+        "max": 38.034,
+        "mean": 32.98
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 31.184,
+        "p95": 38.757,
+        "p99": 38.757,
+        "max": 38.757,
+        "mean": 32.599
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 169.208,
+        "p95": 178.849,
+        "p99": 178.849,
+        "max": 178.849,
+        "mean": 170.653
+      }
+    },
+    "layer_yield_k2": {
+      "model_key": "pixtral_12b",
+      "display_name": "Pixtral-12B-2409",
+      "payload_modality": "image",
+      "mode": "layer_yield_k2",
+      "parity_max_diff": 0.0,
+      "peak_reserved_mib": 24576.0,
+      "stash_mib": 4.5,
+      "hidden_stash_mib": 4.5,
+      "extra_stash_mib": 0.0,
+      "num_blocks": 24,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 27.206,
+        "p95": 31.243,
+        "p99": 33.013,
+        "max": 33.435,
+        "mean": 28.061
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 576,
+        "p50": 30.168,
+        "p95": 32.389,
+        "p99": 33.435,
+        "max": 33.435,
+        "mean": 30.569
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 38.943,
+        "p95": 39.888,
+        "p99": 39.888,
+        "max": 39.888,
+        "mean": 38.65
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 338.572,
+        "p95": 343.727,
+        "p99": 343.727,
+        "max": 343.727,
+        "mean": 339.377
+      }
+    }
+  }
+}

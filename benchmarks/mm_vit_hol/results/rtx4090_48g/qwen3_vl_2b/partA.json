@@ -1,0 +1,272 @@
+{
+  "model_key": "qwen3_vl_2b",
+  "display_name": "Qwen3-VL-2B",
+  "model_path": "/share/shared_weights/Qwen3-VL-2B",
+  "cudagraph_mm_encoder": false,
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "1",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "isolated": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "family": "qwen3_vl",
+      "model_path": "/share/shared_weights/Qwen3-VL-2B",
+      "cudagraph_mm_encoder": false,
+      "env": {
+        "hostname": "test-X640-G40",
+        "torch_version": "2.14.0+cu132",
+        "cuda_version": "13.2",
+        "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+        "cuda_visible_devices": "1",
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_sm": "sm_89",
+        "gpu_vram_mib": 48508.1,
+        "gpu_sm_count": 128,
+        "git_commit": "b9fc915ee6"
+      },
+      "isolated_cases": {
+        "img_1024x1024": {
+          "modality": "image",
+          "prompt_tokens_total": 1037,
+          "vit_p50_ms": 32.75,
+          "vit_p95_ms": 153.094,
+          "step_total_p50_ms": 60.025
+        },
+        "img_1920x1080": {
+          "modality": "image",
+          "prompt_tokens_total": 2053,
+          "vit_p50_ms": 84.804,
+          "vit_p95_ms": 84.987,
+          "step_total_p50_ms": 140.165
+        },
+        "img_2048x1400_2k": {
+          "modality": "image",
+          "prompt_tokens_total": 2829,
+          "vit_p50_ms": 140.049,
+          "vit_p95_ms": 140.313,
+          "step_total_p50_ms": 212.301
+        },
+        "img_3840x2160_4k": {
+          "modality": "image",
+          "prompt_tokens_total": 4093,
+          "vit_p50_ms": 254.781,
+          "vit_p95_ms": 256.046,
+          "step_total_p50_ms": 356.41
+        },
+        "vid_16f_560": {
+          "modality": "video",
+          "prompt_tokens_total": 2125,
+          "vit_p50_ms": 49.405,
+          "vit_p95_ms": 50.89,
+          "step_total_p50_ms": 111.583
+        },
+        "vid_32f_560": {
+          "modality": "video",
+          "prompt_tokens_total": 2083,
+          "vit_p50_ms": 45.691,
+          "vit_p95_ms": 46.327,
+          "step_total_p50_ms": 106.9
+        },
+        "vid_32f_784": {
+          "modality": "video",
+          "prompt_tokens_total": 2083,
+          "vit_p50_ms": 45.907,
+          "vit_p95_ms": 46.112,
+          "step_total_p50_ms": 106.023
+        }
+      },
+      "part_a_unit_chunking": {
+        "vid_16f_560": {
+          "unit_label": "temporal_slices(t=8,h=32,w=32)",
+          "num_units": 8,
+          "output_tokens": 2048,
+          "monolithic_p50_ms": 47.259,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 8,
+              "chunk_p50_ms": 15.724,
+              "chunk_max_ms": 23.525,
+              "sum_chunks_ms": 137.784,
+              "peak_reduction_pct": 50.22,
+              "compute_overhead_pct": 191.55,
+              "max_abs_diff": 2.28125,
+              "cosine_sim": 0.99900585
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 4,
+              "chunk_p50_ms": 15.349,
+              "chunk_max_ms": 15.505,
+              "sum_chunks_ms": 61.491,
+              "peak_reduction_pct": 67.19,
+              "compute_overhead_pct": 30.12,
+              "max_abs_diff": 2.40625,
+              "cosine_sim": 0.99910706
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 2,
+              "chunk_p50_ms": 24.056,
+              "chunk_max_ms": 24.243,
+              "sum_chunks_ms": 48.299,
+              "peak_reduction_pct": 48.7,
+              "compute_overhead_pct": 2.2,
+              "max_abs_diff": 0.125,
+              "cosine_sim": 0.99999791
+            }
+          }
+        },
+        "vid_32f_560": {
+          "unit_label": "temporal_slices(t=16,h=22,w=22)",
+          "num_units": 16,
+          "output_tokens": 1936,
+          "monolithic_p50_ms": 44.136,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 16,
+              "chunk_p50_ms": 17.244,
+              "chunk_max_ms": 21.646,
+              "sum_chunks_ms": 278.861,
+              "peak_reduction_pct": 50.96,
+              "compute_overhead_pct": 531.82,
+              "max_abs_diff": 3.3125,
+              "cosine_sim": 0.99911499
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 8,
+              "chunk_p50_ms": 15.215,
+              "chunk_max_ms": 19.499,
+              "sum_chunks_ms": 125.957,
+              "peak_reduction_pct": 55.82,
+              "compute_overhead_pct": 185.38,
+              "max_abs_diff": 2.25,
+              "cosine_sim": 0.99914324
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 4,
+              "chunk_p50_ms": 16.298,
+              "chunk_max_ms": 18.918,
+              "sum_chunks_ms": 67.145,
+              "peak_reduction_pct": 57.14,
+              "compute_overhead_pct": 52.13,
+              "max_abs_diff": 2.46875,
+              "cosine_sim": 0.99916184
+            }
+          }
+        },
+        "vid_32f_784": {
+          "unit_label": "temporal_slices(t=16,h=22,w=22)",
+          "num_units": 16,
+          "output_tokens": 1936,
+          "monolithic_p50_ms": 43.896,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 16,
+              "chunk_p50_ms": 15.938,
+              "chunk_max_ms": 20.79,
+              "sum_chunks_ms": 268.404,
+              "peak_reduction_pct": 52.64,
+              "compute_overhead_pct": 511.46,
+              "max_abs_diff": 2.5625,
+              "cosine_sim": 0.99917668
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 8,
+              "chunk_p50_ms": 15.377,
+              "chunk_max_ms": 17.787,
+              "sum_chunks_ms": 126.656,
+              "peak_reduction_pct": 59.48,
+              "compute_overhead_pct": 188.54,
+              "max_abs_diff": 2.34375,
+              "cosine_sim": 0.99924767
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 4,
+              "chunk_p50_ms": 16.628,
+              "chunk_max_ms": 19.601,
+              "sum_chunks_ms": 71.03,
+              "peak_reduction_pct": 55.35,
+              "compute_overhead_pct": 61.81,
+              "max_abs_diff": 2.70751953125,
+              "cosine_sim": 0.9991383
+            }
+          }
+        }
+      },
+      "peak_reserved_mib": 5314.0
+    },
+    "decode_only": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "max_num_batched_tokens": 2048,
+      "heavy_spec": "none",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 6.158,
+      "decode_gpu_itl_p95_ms": 7.2,
+      "decode_gpu_itl_p99_ms": 8.536,
+      "decode_gpu_itl_max_ms": 127.316,
+      "vit_spike_p50_ms": 0.0,
+      "vit_share_of_spike_step_p50": 0.0,
+      "peak_reserved_mib": 4718.0
+    },
+    "coloc_256_4k_img": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "max_num_batched_tokens": 256,
+      "heavy_spec": "img_4k",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 15.926,
+      "decode_gpu_itl_p95_ms": 272.206,
+      "decode_gpu_itl_p99_ms": 277.022,
+      "decode_gpu_itl_max_ms": 420.838,
+      "vit_spike_p50_ms": 257.534,
+      "vit_share_of_spike_step_p50": 0.9325,
+      "peak_reserved_mib": 5004.0
+    },
+    "coloc_256_vid32_784": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "max_num_batched_tokens": 256,
+      "heavy_spec": "vid_32f_784",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 7.858,
+      "decode_gpu_itl_p95_ms": 62.507,
+      "decode_gpu_itl_p99_ms": 65.452,
+      "decode_gpu_itl_max_ms": 73.222,
+      "vit_spike_p50_ms": 46.505,
+      "vit_share_of_spike_step_p50": 0.739,
+      "peak_reserved_mib": 4658.0
+    },
+    "coloc_2048_vid32_784": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "max_num_batched_tokens": 2048,
+      "heavy_spec": "vid_32f_784",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 6.814,
+      "decode_gpu_itl_p95_ms": 96.933,
+      "decode_gpu_itl_p99_ms": 99.928,
+      "decode_gpu_itl_max_ms": 114.866,
+      "vit_spike_p50_ms": 46.977,
+      "vit_share_of_spike_step_p50": 0.4792,
+      "peak_reserved_mib": 4718.0
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "model_key": "minicpm_v_4_5",
+  "display_name": "MiniCPM-V-4.5",
+  "family": "minicpmv",
+  "model_path": "/share/shared_weights/openbmb/MiniCPM-V-4_5",
+  "payload_modality": "image",
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "4",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "decode_only": {
+      "model_key": "minicpm_v_4_5",
+      "display_name": "MiniCPM-V-4.5",
+      "payload_modality": "image",
+      "mode": "decode_only",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 17234.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 19.105,
+        "p95": 19.695,
+        "p99": 20.256,
+        "max": 123.393,
+        "mean": 19.594
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_compute_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_wall_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "atomic_serial": {
+      "model_key": "minicpm_v_4_5",
+      "display_name": "MiniCPM-V-4.5",
+      "payload_modality": "image",
+      "mode": "atomic_serial",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 17764.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 19.274,
+        "p95": 20.139,
+        "p99": 96.271,
+        "max": 97.12,
+        "mean": 21.071
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 48,
+        "p50": 96.093,
+        "p95": 97.12,
+        "p99": 97.12,
+        "max": 97.12,
+        "mean": 96.394
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 76.469,
+        "p95": 77.327,
+        "p99": 77.327,
+        "max": 77.327,
+        "mean": 76.75
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 76.561,
+        "p95": 77.452,
+        "p99": 77.452,
+        "max": 77.452,
+        "mean": 76.863
+      }
+    },
+    "dual_stream_same_proc": {
+      "model_key": "minicpm_v_4_5",
+      "display_name": "MiniCPM-V-4.5",
+      "payload_modality": "image",
+      "mode": "dual_stream_same_proc",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 18430.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 19.083,
+        "p95": 20.62,
+        "p99": 79.143,
+        "max": 80.407,
+        "mean": 20.663
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 96,
+        "p50": 40.203,
+        "p95": 80.407,
+        "p99": 80.407,
+        "max": 80.407,
+        "mean": 53.739
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 91.536,
+        "p95": 94.689,
+        "p99": 94.689,
+        "max": 94.689,
+        "mean": 92.206
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 91.648,
+        "p95": 94.881,
+        "p99": 94.881,
+        "max": 94.881,
+        "mean": 92.55
+      }
+    },
+    "unit_yield_c2": {
+      "model_key": "minicpm_v_4_5",
+      "display_name": "MiniCPM-V-4.5",
+      "payload_modality": "image",
+      "mode": "unit_yield_c2",
+      "parity_max_diff": 0.25,
+      "peak_reserved_mib": 17766.0,
+      "stash_mib": 0.0,
+      "unit_label": "image_slices(n=9)",
+      "num_units": 9,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 19.143,
+        "p95": 37.626,
+        "p99": 40.596,
+        "max": 42.856,
+        "mean": 21.266
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 240,
+        "p50": 37.594,
+        "p95": 41.675,
+        "p99": 42.856,
+        "max": 42.856,
+        "mean": 37.728
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 90.944,
+        "p95": 98.413,
+        "p99": 98.413,
+        "max": 98.413,
+        "mean": 91.931
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 168.528,
+        "p95": 175.653,
+        "p99": 175.653,
+        "max": 175.653,
+        "mean": 169.333
+      }
+    },
+    "unit_yield_c1": {
+      "model_key": "minicpm_v_4_5",
+      "display_name": "MiniCPM-V-4.5",
+      "payload_modality": "image",
+      "mode": "unit_yield_c1",
+      "parity_max_diff": 0.375,
+      "peak_reserved_mib": 17766.0,
+      "stash_mib": 0.0,
+      "unit_label": "image_slices(n=9)",
+      "num_units": 9,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 19.028,
+        "p95": 34.571,
+        "p99": 36.649,
+        "max": 37.518,
+        "mean": 22.043
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 432,
+        "p50": 33.384,
+        "p95": 36.649,
+        "p99": 37.518,
+        "max": 37.518,
+        "mean": 33.913
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 132.895,
+        "p95": 136.996,
+        "p99": 136.996,
+        "max": 136.996,
+        "mean": 132.985
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 286.479,
+        "p95": 289.917,
+        "p99": 289.917,
+        "max": 289.917,
+        "mean": 286.025
+      }
+    }
+  }
+}

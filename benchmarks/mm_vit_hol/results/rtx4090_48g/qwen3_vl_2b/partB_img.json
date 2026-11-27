@@ -1,0 +1,229 @@
+{
+  "model_key": "qwen3_vl_2b",
+  "display_name": "Qwen3-VL-2B",
+  "family": "qwen3_vl",
+  "model_path": "/share/shared_weights/Qwen3-VL-2B",
+  "payload_modality": "image",
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "2",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "decode_only": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "payload_modality": "image",
+      "mode": "decode_only",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 4356.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 6.142,
+        "p95": 6.723,
+        "p99": 7.097,
+        "max": 127.622,
+        "mean": 6.656
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_compute_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_wall_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "atomic_serial": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "payload_modality": "image",
+      "mode": "atomic_serial",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 5156.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 6.15,
+        "p95": 6.86,
+        "p99": 260.605,
+        "max": 260.905,
+        "mean": 11.94
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 48,
+        "p50": 260.538,
+        "p95": 260.905,
+        "p99": 260.905,
+        "max": 260.905,
+        "mean": 260.506
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 253.148,
+        "p95": 253.83,
+        "p99": 253.83,
+        "max": 253.83,
+        "mean": 253.315
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 253.265,
+        "p95": 253.901,
+        "p99": 253.901,
+        "max": 253.901,
+        "mean": 253.41
+      }
+    },
+    "dual_stream_same_proc": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "payload_modality": "image",
+      "mode": "dual_stream_same_proc",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 5708.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 6.098,
+        "p95": 7.284,
+        "p99": 138.762,
+        "max": 141.799,
+        "mean": 11.727
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 112,
+        "p50": 127.667,
+        "p95": 141.799,
+        "p99": 141.799,
+        "max": 141.799,
+        "mean": 112.255
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 258.501,
+        "p95": 260.602,
+        "p99": 260.602,
+        "max": 260.602,
+        "mean": 258.959
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 258.836,
+        "p95": 260.751,
+        "p99": 260.751,
+        "max": 260.751,
+        "mean": 259.129
+      }
+    },
+    "layer_yield_k4": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "payload_modality": "image",
+      "mode": "layer_yield_k4",
+      "parity_max_diff": 0.0,
+      "peak_reserved_mib": 5220.0,
+      "stash_mib": 79.69,
+      "hidden_stash_mib": 31.88,
+      "extra_stash_mib": 47.81,
+      "num_blocks": 24,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 6.142,
+        "p95": 49.471,
+        "p99": 49.915,
+        "max": 50.421,
+        "mean": 11.999
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 288,
+        "p50": 49.316,
+        "p95": 50.073,
+        "p99": 50.421,
+        "max": 50.421,
+        "mean": 49.184
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 253.204,
+        "p95": 253.596,
+        "p99": 253.596,
+        "max": 253.596,
+        "mean": 253.224
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 288.039,
+        "p95": 290.339,
+        "p99": 290.339,
+        "max": 290.339,
+        "mean": 288.376
+      }
+    },
+    "layer_yield_k2": {
+      "model_key": "qwen3_vl_2b",
+      "display_name": "Qwen3-VL-2B",
+      "payload_modality": "image",
+      "mode": "layer_yield_k2",
+      "parity_max_diff": 0.0,
+      "peak_reserved_mib": 5220.0,
+      "stash_mib": 79.69,
+      "hidden_stash_mib": 31.88,
+      "extra_stash_mib": 47.81,
+      "num_blocks": 24,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 6.256,
+        "p95": 28.732,
+        "p99": 29.275,
+        "max": 30.088,
+        "mean": 12.048
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 576,
+        "p50": 27.569,
+        "p95": 29.197,
+        "p99": 30.088,
+        "max": 30.088,
+        "mean": 27.865
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 253.682,
+        "p95": 254.411,
+        "p99": 254.411,
+        "max": 254.411,
+        "mean": 253.778
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 326.801,
+        "p95": 332.691,
+        "p99": 332.691,
+        "max": 332.691,
+        "mean": 327.731
+      }
+    }
+  }
+}

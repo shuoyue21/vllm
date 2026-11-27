@@ -1,0 +1,229 @@
+{
+  "model_key": "kimi_vl_a3b",
+  "display_name": "Kimi-VL-A3B-Instruct",
+  "family": "kimi_vl",
+  "model_path": "/share/shared_weights/Kimi-VL-A3B-Instruct",
+  "payload_modality": "image",
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "7",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "decode_only": {
+      "model_key": "kimi_vl_a3b",
+      "display_name": "Kimi-VL-A3B-Instruct",
+      "payload_modality": "image",
+      "mode": "decode_only",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 32590.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.15,
+        "p95": 18.23,
+        "p99": 18.759,
+        "max": 19.104,
+        "mean": 17.12
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_compute_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_wall_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "atomic_serial": {
+      "model_key": "kimi_vl_a3b",
+      "display_name": "Kimi-VL-A3B-Instruct",
+      "payload_modality": "image",
+      "mode": "atomic_serial",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 32590.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.018,
+        "p95": 18.126,
+        "p99": 76.025,
+        "max": 77.923,
+        "mean": 18.28
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 48,
+        "p50": 75.966,
+        "p95": 77.923,
+        "p99": 77.923,
+        "max": 77.923,
+        "mean": 76.207
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 58.56,
+        "p95": 60.174,
+        "p99": 60.174,
+        "max": 60.174,
+        "mean": 58.835
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 58.602,
+        "p95": 60.258,
+        "p99": 60.258,
+        "max": 60.258,
+        "mean": 58.891
+      }
+    },
+    "dual_stream_same_proc": {
+      "model_key": "kimi_vl_a3b",
+      "display_name": "Kimi-VL-A3B-Instruct",
+      "payload_modality": "image",
+      "mode": "dual_stream_same_proc",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 32590.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.055,
+        "p95": 31.392,
+        "p99": 38.498,
+        "max": 50.144,
+        "mean": 18.136
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 152,
+        "p50": 34.733,
+        "p95": 50.144,
+        "p99": 50.144,
+        "max": 50.144,
+        "mean": 33.664
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 94.816,
+        "p95": 121.407,
+        "p99": 121.407,
+        "max": 121.407,
+        "mean": 99.141
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 94.9,
+        "p95": 121.476,
+        "p99": 121.476,
+        "max": 121.476,
+        "mean": 99.225
+      }
+    },
+    "layer_yield_k4": {
+      "model_key": "kimi_vl_a3b",
+      "display_name": "Kimi-VL-A3B-Instruct",
+      "payload_modality": "image",
+      "mode": "layer_yield_k4",
+      "parity_max_diff": 0.0,
+      "peak_reserved_mib": 32590.0,
+      "stash_mib": 9.07,
+      "hidden_stash_mib": 9.07,
+      "extra_stash_mib": 0.0,
+      "num_blocks": 27,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.413,
+        "p95": 26.397,
+        "p99": 27.297,
+        "max": 27.463,
+        "mean": 18.551
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 336,
+        "p50": 25.652,
+        "p95": 27.297,
+        "p99": 27.463,
+        "max": 27.463,
+        "mean": 25.766
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 59.191,
+        "p95": 61.283,
+        "p99": 61.283,
+        "max": 61.283,
+        "mean": 59.929
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 163.028,
+        "p95": 168.837,
+        "p99": 168.837,
+        "max": 168.837,
+        "mean": 163.58
+      }
+    },
+    "layer_yield_k2": {
+      "model_key": "kimi_vl_a3b",
+      "display_name": "Kimi-VL-A3B-Instruct",
+      "payload_modality": "image",
+      "mode": "layer_yield_k2",
+      "parity_max_diff": 0.0,
+      "peak_reserved_mib": 32590.0,
+      "stash_mib": 9.07,
+      "hidden_stash_mib": 9.07,
+      "extra_stash_mib": 0.0,
+      "num_blocks": 27,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.443,
+        "p95": 22.558,
+        "p99": 23.008,
+        "max": 24.073,
+        "mean": 18.467
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 672,
+        "p50": 21.493,
+        "p95": 22.961,
+        "p99": 24.073,
+        "max": 24.073,
+        "mean": 21.548
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 61.202,
+        "p95": 61.828,
+        "p99": 61.828,
+        "max": 61.828,
+        "mean": 61.23
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 285.348,
+        "p95": 292.685,
+        "p99": 292.685,
+        "max": 292.685,
+        "mean": 284.895
+      }
+    }
+  }
+}

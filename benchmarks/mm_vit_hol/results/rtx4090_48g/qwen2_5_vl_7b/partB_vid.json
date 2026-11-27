@@ -1,0 +1,227 @@
+{
+  "model_key": "qwen2_5_vl_7b",
+  "display_name": "Qwen2.5-VL-7B",
+  "family": "qwen2_5_vl",
+  "model_path": "/share/shared_weights/Qwen2.5-VL-7B",
+  "payload_modality": "video",
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "1",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "decode_only": {
+      "model_key": "qwen2_5_vl_7b",
+      "display_name": "Qwen2.5-VL-7B",
+      "payload_modality": "video",
+      "mode": "decode_only",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 16288.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.063,
+        "p95": 17.783,
+        "p99": 18.788,
+        "max": 18.96,
+        "mean": 17.159
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_compute_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_wall_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "atomic_serial": {
+      "model_key": "qwen2_5_vl_7b",
+      "display_name": "Qwen2.5-VL-7B",
+      "payload_modality": "video",
+      "mode": "atomic_serial",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 19136.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.271,
+        "p95": 17.946,
+        "p99": 758.82,
+        "max": 762.367,
+        "mean": 33.997
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 48,
+        "p50": 758.536,
+        "p95": 762.367,
+        "p99": 762.367,
+        "max": 762.367,
+        "mean": 759.05
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 740.231,
+        "p95": 741.285,
+        "p99": 741.285,
+        "max": 741.285,
+        "mean": 740.523
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 740.335,
+        "p95": 741.385,
+        "p99": 741.385,
+        "max": 741.385,
+        "mean": 740.648
+      }
+    },
+    "dual_stream_same_proc": {
+      "model_key": "qwen2_5_vl_7b",
+      "display_name": "Qwen2.5-VL-7B",
+      "payload_modality": "video",
+      "mode": "dual_stream_same_proc",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 21612.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.34,
+        "p95": 216.732,
+        "p99": 232.146,
+        "max": 234.703,
+        "mean": 33.754
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 192,
+        "p50": 220.359,
+        "p95": 233.9,
+        "p99": 234.703,
+        "max": 234.703,
+        "mean": 199.557
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 789.277,
+        "p95": 789.847,
+        "p99": 789.847,
+        "max": 789.847,
+        "mean": 789.099
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 789.476,
+        "p95": 789.955,
+        "p99": 789.955,
+        "max": 789.955,
+        "mean": 789.256
+      }
+    },
+    "unit_yield_c2": {
+      "model_key": "qwen2_5_vl_7b",
+      "display_name": "Qwen2.5-VL-7B",
+      "payload_modality": "video",
+      "mode": "unit_yield_c2",
+      "parity_max_diff": 0.25,
+      "peak_reserved_mib": 19138.0,
+      "stash_mib": 0.0,
+      "unit_label": "temporal_slices(t=16,h=56,w=56)",
+      "num_units": 16,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.283,
+        "p95": 97.895,
+        "p99": 99.009,
+        "max": 100.299,
+        "mean": 31.726
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 384,
+        "p50": 97.534,
+        "p95": 99.009,
+        "p99": 100.299,
+        "max": 100.299,
+        "mean": 97.571
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 637.771,
+        "p95": 639.485,
+        "p99": 639.485,
+        "max": 639.485,
+        "mean": 637.834
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 761.283,
+        "p95": 767.529,
+        "p99": 767.529,
+        "max": 767.529,
+        "mean": 762.766
+      }
+    },
+    "unit_yield_c1": {
+      "model_key": "qwen2_5_vl_7b",
+      "display_name": "Qwen2.5-VL-7B",
+      "payload_modality": "video",
+      "mode": "unit_yield_c1",
+      "parity_max_diff": 0.25,
+      "peak_reserved_mib": 19138.0,
+      "stash_mib": 0.0,
+      "unit_label": "temporal_slices(t=16,h=56,w=56)",
+      "num_units": 16,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 17.453,
+        "p95": 60.268,
+        "p99": 63.049,
+        "max": 67.434,
+        "mean": 32.067
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 768,
+        "p50": 57.513,
+        "p95": 61.896,
+        "p99": 67.434,
+        "max": 67.434,
+        "mean": 58.213
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 653.308,
+        "p95": 656.673,
+        "p99": 656.673,
+        "max": 656.673,
+        "mean": 651.998
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 915.576,
+        "p95": 920.557,
+        "p99": 920.557,
+        "max": 920.557,
+        "mean": 913.761
+      }
+    }
+  }
+}

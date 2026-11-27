@@ -1,0 +1,12 @@
+{
+  "hostname": "test-X640-G40",
+  "torch_version": "2.14.0+cu132",
+  "cuda_version": "13.2",
+  "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+  "cuda_visible_devices": "1",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "gpu_sm": "sm_89",
+  "gpu_vram_mib": 48508.1,
+  "gpu_sm_count": 128,
+  "git_commit": "b9fc915ee6"
+}

@@ -1,0 +1,272 @@
+{
+  "model_key": "qwen3_vl_8b",
+  "display_name": "Qwen3-VL-8B-Instruct",
+  "model_path": "/share/shared_weights/Qwen3-VL-8B-Instruct",
+  "cudagraph_mm_encoder": false,
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "4",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "isolated": {
+      "model_key": "qwen3_vl_8b",
+      "display_name": "Qwen3-VL-8B-Instruct",
+      "family": "qwen3_vl",
+      "model_path": "/share/shared_weights/Qwen3-VL-8B-Instruct",
+      "cudagraph_mm_encoder": false,
+      "env": {
+        "hostname": "test-X640-G40",
+        "torch_version": "2.14.0+cu132",
+        "cuda_version": "13.2",
+        "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+        "cuda_visible_devices": "4",
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_sm": "sm_89",
+        "gpu_vram_mib": 48508.1,
+        "gpu_sm_count": 128,
+        "git_commit": "b9fc915ee6"
+      },
+      "isolated_cases": {
+        "img_1024x1024": {
+          "modality": "image",
+          "prompt_tokens_total": 1037,
+          "vit_p50_ms": 49.736,
+          "vit_p95_ms": 177.406,
+          "step_total_p50_ms": 161.369
+        },
+        "img_1920x1080": {
+          "modality": "image",
+          "prompt_tokens_total": 2053,
+          "vit_p50_ms": 130.849,
+          "vit_p95_ms": 131.188,
+          "step_total_p50_ms": 352.909
+        },
+        "img_2048x1400_2k": {
+          "modality": "image",
+          "prompt_tokens_total": 2829,
+          "vit_p50_ms": 216.016,
+          "vit_p95_ms": 218.152,
+          "step_total_p50_ms": 511.972
+        },
+        "img_3840x2160_4k": {
+          "modality": "image",
+          "prompt_tokens_total": 4093,
+          "vit_p50_ms": 399.3,
+          "vit_p95_ms": 400.014,
+          "step_total_p50_ms": 820.327
+        },
+        "vid_16f_560": {
+          "modality": "video",
+          "prompt_tokens_total": 2125,
+          "vit_p50_ms": 69.735,
+          "vit_p95_ms": 70.025,
+          "step_total_p50_ms": 297.267
+        },
+        "vid_32f_560": {
+          "modality": "video",
+          "prompt_tokens_total": 2083,
+          "vit_p50_ms": 64.041,
+          "vit_p95_ms": 64.723,
+          "step_total_p50_ms": 289.512
+        },
+        "vid_32f_784": {
+          "modality": "video",
+          "prompt_tokens_total": 2083,
+          "vit_p50_ms": 62.926,
+          "vit_p95_ms": 63.168,
+          "step_total_p50_ms": 290.629
+        }
+      },
+      "part_a_unit_chunking": {
+        "vid_16f_560": {
+          "unit_label": "temporal_slices(t=8,h=32,w=32)",
+          "num_units": 8,
+          "output_tokens": 2048,
+          "monolithic_p50_ms": 68.434,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 8,
+              "chunk_p50_ms": 17.089,
+              "chunk_max_ms": 21.628,
+              "sum_chunks_ms": 142.764,
+              "peak_reduction_pct": 68.4,
+              "compute_overhead_pct": 108.62,
+              "max_abs_diff": 1.078125,
+              "cosine_sim": 0.99897462
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 4,
+              "chunk_p50_ms": 18.622,
+              "chunk_max_ms": 21.199,
+              "sum_chunks_ms": 77.8,
+              "peak_reduction_pct": 69.02,
+              "compute_overhead_pct": 13.69,
+              "max_abs_diff": 0.8984375,
+              "cosine_sim": 0.99906635
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 2,
+              "chunk_p50_ms": 36.275,
+              "chunk_max_ms": 36.7,
+              "sum_chunks_ms": 72.975,
+              "peak_reduction_pct": 46.37,
+              "compute_overhead_pct": 6.64,
+              "max_abs_diff": 0.8671875,
+              "cosine_sim": 0.99932373
+            }
+          }
+        },
+        "vid_32f_560": {
+          "unit_label": "temporal_slices(t=16,h=22,w=22)",
+          "num_units": 16,
+          "output_tokens": 1936,
+          "monolithic_p50_ms": 61.571,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 16,
+              "chunk_p50_ms": 16.754,
+              "chunk_max_ms": 23.613,
+              "sum_chunks_ms": 290.445,
+              "peak_reduction_pct": 61.65,
+              "compute_overhead_pct": 371.72,
+              "max_abs_diff": 0.90625,
+              "cosine_sim": 0.99882507
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 8,
+              "chunk_p50_ms": 17.074,
+              "chunk_max_ms": 20.586,
+              "sum_chunks_ms": 142.347,
+              "peak_reduction_pct": 66.56,
+              "compute_overhead_pct": 131.19,
+              "max_abs_diff": 1.02734375,
+              "cosine_sim": 0.99881172
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 4,
+              "chunk_p50_ms": 17.56,
+              "chunk_max_ms": 18.271,
+              "sum_chunks_ms": 71.524,
+              "peak_reduction_pct": 70.32,
+              "compute_overhead_pct": 16.17,
+              "max_abs_diff": 1.09375,
+              "cosine_sim": 0.99866331
+            }
+          }
+        },
+        "vid_32f_784": {
+          "unit_label": "temporal_slices(t=16,h=22,w=22)",
+          "num_units": 16,
+          "output_tokens": 1936,
+          "monolithic_p50_ms": 61.395,
+          "chunks": {
+            "c1": {
+              "chunk_size": 1,
+              "num_chunks": 16,
+              "chunk_p50_ms": 16.893,
+              "chunk_max_ms": 20.466,
+              "sum_chunks_ms": 278.74,
+              "peak_reduction_pct": 66.67,
+              "compute_overhead_pct": 354.01,
+              "max_abs_diff": 1.0234375,
+              "cosine_sim": 0.99880511
+            },
+            "c2": {
+              "chunk_size": 2,
+              "num_chunks": 8,
+              "chunk_p50_ms": 17.737,
+              "chunk_max_ms": 19.18,
+              "sum_chunks_ms": 145.095,
+              "peak_reduction_pct": 68.76,
+              "compute_overhead_pct": 136.33,
+              "max_abs_diff": 1.203125,
+              "cosine_sim": 0.9988991
+            },
+            "c4": {
+              "chunk_size": 4,
+              "num_chunks": 4,
+              "chunk_p50_ms": 20.124,
+              "chunk_max_ms": 21.734,
+              "sum_chunks_ms": 79.878,
+              "peak_reduction_pct": 64.6,
+              "compute_overhead_pct": 30.11,
+              "max_abs_diff": 1.34375,
+              "cosine_sim": 0.99860442
+            }
+          }
+        }
+      },
+      "peak_reserved_mib": 18492.0
+    },
+    "decode_only": {
+      "model_key": "qwen3_vl_8b",
+      "display_name": "Qwen3-VL-8B-Instruct",
+      "max_num_batched_tokens": 2048,
+      "heavy_spec": "none",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 18.641,
+      "decode_gpu_itl_p95_ms": 19.868,
+      "decode_gpu_itl_p99_ms": 20.432,
+      "decode_gpu_itl_max_ms": 130.749,
+      "vit_spike_p50_ms": 0.0,
+      "vit_share_of_spike_step_p50": 0.0,
+      "peak_reserved_mib": 17492.0
+    },
+    "coloc_256_4k_img": {
+      "model_key": "qwen3_vl_8b",
+      "display_name": "Qwen3-VL-8B-Instruct",
+      "max_num_batched_tokens": 256,
+      "heavy_spec": "img_4k",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 33.333,
+      "decode_gpu_itl_p95_ms": 428.068,
+      "decode_gpu_itl_p99_ms": 433.535,
+      "decode_gpu_itl_max_ms": 570.729,
+      "vit_spike_p50_ms": 397.061,
+      "vit_share_of_spike_step_p50": 0.9229,
+      "peak_reserved_mib": 17712.0
+    },
+    "coloc_256_vid32_784": {
+      "model_key": "qwen3_vl_8b",
+      "display_name": "Qwen3-VL-8B-Instruct",
+      "max_num_batched_tokens": 256,
+      "heavy_spec": "vid_32f_784",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 20.693,
+      "decode_gpu_itl_p95_ms": 94.471,
+      "decode_gpu_itl_p99_ms": 96.899,
+      "decode_gpu_itl_max_ms": 107.677,
+      "vit_spike_p50_ms": 63.103,
+      "vit_share_of_spike_step_p50": 0.6635,
+      "peak_reserved_mib": 17392.0
+    },
+    "coloc_2048_vid32_784": {
+      "model_key": "qwen3_vl_8b",
+      "display_name": "Qwen3-VL-8B-Instruct",
+      "max_num_batched_tokens": 2048,
+      "heavy_spec": "vid_32f_784",
+      "cudagraph_mm_encoder": false,
+      "decode_gpu_itl_p50_ms": 18.889,
+      "decode_gpu_itl_p95_ms": 267.494,
+      "decode_gpu_itl_p99_ms": 269.467,
+      "decode_gpu_itl_max_ms": 283.997,
+      "vit_spike_p50_ms": 63.679,
+      "vit_share_of_spike_step_p50": 0.2377,
+      "peak_reserved_mib": 17518.0
+    }
+  }
+}

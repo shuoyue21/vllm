@@ -1,0 +1,227 @@
+{
+  "model_key": "internvl3_5_8b",
+  "display_name": "InternVL3.5-8B-HF",
+  "family": "internvl_hf",
+  "model_path": "/share/xbh/model/InternVL3_5-8B-HF",
+  "payload_modality": "video",
+  "env": {
+    "hostname": "test-X640-G40",
+    "torch_version": "2.14.0+cu132",
+    "cuda_version": "13.2",
+    "vllm_version": "0.34.1.dev0+g62d4bc3c7.d20261116",
+    "cuda_visible_devices": "4",
+    "gpu_name": "NVIDIA GeForce RTX 4090",
+    "gpu_sm": "sm_89",
+    "gpu_vram_mib": 48508.1,
+    "gpu_sm_count": 128,
+    "git_commit": "b9fc915ee6"
+  },
+  "modes": {
+    "decode_only": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "payload_modality": "video",
+      "mode": "decode_only",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 16420.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 18.916,
+        "p95": 19.506,
+        "p99": 20.006,
+        "max": 20.489,
+        "mean": 18.961
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_compute_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "vit_wall_ms": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "atomic_serial": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "payload_modality": "video",
+      "mode": "atomic_serial",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 17786.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 18.948,
+        "p95": 19.819,
+        "p99": 212.327,
+        "max": 212.6,
+        "mean": 23.377
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 48,
+        "p50": 212.24,
+        "p95": 212.6,
+        "p99": 212.6,
+        "max": 212.6,
+        "mean": 212.279
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 192.707,
+        "p95": 193.004,
+        "p99": 193.004,
+        "max": 193.004,
+        "mean": 192.69
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 192.79,
+        "p95": 193.08,
+        "p99": 193.08,
+        "max": 193.08,
+        "mean": 192.79
+      }
+    },
+    "dual_stream_same_proc": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "payload_modality": "video",
+      "mode": "dual_stream_same_proc",
+      "parity_max_diff": null,
+      "peak_reserved_mib": 18630.0,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 19.257,
+        "p95": 23.373,
+        "p99": 132.297,
+        "max": 135.797,
+        "mean": 23.479
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 96,
+        "p50": 91.185,
+        "p95": 135.797,
+        "p99": 135.797,
+        "max": 135.797,
+        "mean": 110.849
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 212.521,
+        "p95": 218.973,
+        "p99": 218.973,
+        "max": 218.973,
+        "mean": 213.755
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 212.613,
+        "p95": 219.172,
+        "p99": 219.172,
+        "max": 219.172,
+        "mean": 213.867
+      }
+    },
+    "unit_yield_c2": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "payload_modality": "video",
+      "mode": "unit_yield_c2",
+      "parity_max_diff": 1.265625,
+      "peak_reserved_mib": 17528.0,
+      "stash_mib": 0.0,
+      "unit_label": "tiles(n=32,shape=[3, 448, 448])",
+      "num_units": 32,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 19.261,
+        "p95": 35.279,
+        "p99": 37.178,
+        "max": 38.219,
+        "mean": 24.387
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 768,
+        "p50": 33.333,
+        "p95": 36.576,
+        "p99": 38.219,
+        "max": 38.219,
+        "mean": 33.881
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 233.668,
+        "p95": 241.472,
+        "p99": 241.472,
+        "max": 241.472,
+        "mean": 234.806
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 521.955,
+        "p95": 529.373,
+        "p99": 529.373,
+        "max": 529.373,
+        "mean": 522.933
+      }
+    },
+    "unit_yield_c1": {
+      "model_key": "internvl3_5_8b",
+      "display_name": "InternVL3.5-8B-HF",
+      "payload_modality": "video",
+      "mode": "unit_yield_c1",
+      "parity_max_diff": 1.515625,
+      "peak_reserved_mib": 17528.0,
+      "stash_mib": 0.0,
+      "unit_label": "tiles(n=32,shape=[3, 448, 448])",
+      "num_units": 32,
+      "decode_itl_all_ms": {
+        "count": 2134,
+        "p50": 31.405,
+        "p95": 37.26,
+        "p99": 40.549,
+        "max": 43.345,
+        "mean": 29.196
+      },
+      "decode_itl_during_vit_ms": {
+        "count": 1536,
+        "p50": 32.029,
+        "p95": 38.158,
+        "p99": 42.857,
+        "max": 43.345,
+        "mean": 33.093
+      },
+      "vit_compute_ms": {
+        "count": 6,
+        "p50": 435.889,
+        "p95": 461.823,
+        "p99": 461.823,
+        "max": 461.823,
+        "mean": 440.266
+      },
+      "vit_wall_ms": {
+        "count": 6,
+        "p50": 1029.758,
+        "p95": 1067.188,
+        "p99": 1067.188,
+        "max": 1067.188,
+        "mean": 1039.706
+      }
+    }
+  }
+}
